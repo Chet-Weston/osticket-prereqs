@@ -44,10 +44,10 @@ Within “c:\inetpub\wwwroot”, rename “upload” to “osTicket”
 <h2>Installation Steps</h2>
 
 <p>
-<img src="https://imgur.com/a/YazZUKU" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img src="https://imgur.com/a/YazZUKU" height="80%" width="80%" alt="Turn Windows Features On or Off"/>
 </p>
 <p>
-Create an Azure Virtual Machine with Windows 10 & 4 CPUs. In the VM that we have just created, download the (osTicket-Installation-Files.zip) to your desktop and unzip the files. The file should be called “osTicket-Installation-Files." As well as enabling Internet Information Services (IIS) in Windows, along with CGI. From the start menu, search for "Control Panel" and locate the option "Programs"; from there, select "Turn Windows features on or off." Locate the option "Internet Information Services" and make sure it's selected. From there, follow this path to enable CGI (Internet Information Services ---> World Wide Web Services ---> Application Development Features ---> [X] CGI 
+Create an Azure Virtual Machine with Windows 10 & 4 CPUs. In the VM that we have just created, download the (osTicket-Installation-Files.zip) to your desktop and unzip the files. The file should be called “osTicket-Installation-Files." As well as enabling Internet Information Services (IIS) in Windows, along with CGI. From the Start menu, search for "Control Panel" and locate the "Programs" option; then, select "Turn Windows features on or off." Locate the option "Internet Information Services" and make sure it's selected. From there, follow this path to enable CGI (Internet Information Services ---> World Wide Web Services ---> Application Development Features ---> [X] CGI. These steps are important to ensure that the web server is properly installed 
 </p>
 <br />
 
