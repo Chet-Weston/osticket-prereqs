@@ -55,7 +55,11 @@ Create an Azure Virtual Machine with Windows 10 & 4 CPUs. In the VM that we have
 <img src="https://i.imgur.com/DJmEXEB.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 </p>
 <p>
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+On your C: drive create a "PHP" folder, Navagate back to the now unzipped "osTicket-v1.15.8.zip" folder and "right click" and "extract all" From the “osTicket-Installation-Files” folder, unzip PHP 7.3.8 (php-7.3.8-nts-Win32-VC15-x86.zip) into the “C:\PHP” folder. From the “osTicket-Installation-Files” folder, install "VC_redist.x86.exe" & From the “osTicket-Installation-Files” folder, install "MySQL 5.5.62" (mysql-5.5.62-win32.msi) and follow these setup configurations 
+Typical Setup ->
+Launch Configuration Wizard (after install) ->
+Standard Configuration ->
+
 </p>
 <br />
 
