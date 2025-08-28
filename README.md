@@ -47,31 +47,15 @@ Within “c:\inetpub\wwwroot”, rename “upload” to “osTicket”
 <img src="https://i.imgur.com/XX3l96p.png" height="80%" width="80%" alt="Turn Windows Features On or Off"/>
 </p>
 <p>
-Create an Azure Virtual Machine with Windows 10 & 4 CPUs. In the VM that we have just created, download the (osTicket-Installation-Files.zip) to your desktop and unzip the files. Make sure the file is named “osTicket-Installation-Files." As well as enabling Internet Information Services (IIS) in Windows, along with CGI. To do this from the Start menu, search for "Control Panel" and locate the "Programs" option; then, select "Turn Windows features on or off." Locate the option "Internet Information Services" and make sure it's selected. From there, follow this path to enable CGI (Internet Information Services ---> World Wide Web Services ---> Application Development Features ---> [X] CGI. These steps are important to ensure that the web server is properly installed 
+Create an Azure Virtual Machine with Windows 10 & 4 CPUs. In the VM that we have just created, download the (osTicket-Installation-Files.zip) to your desktop and unzip the files. Make sure the file is named “osTicket-Installation-Files." As well as enabling Internet Information Services (IIS) in Windows, along with CGI. To do this from the Start menu, search for "Control Panel" and locate the "Programs" option; then, select "Turn Windows features on or off." Locate the option "Internet Information Services" and double-check that it's selected. From there, follow this path to enable CGI (Internet Information Services ---> World Wide Web Services ---> Application Development Features ---> [X] CGI. These steps are important to ensure that the web server is properly installed 
 </p>
 <br />
 
 <p>
-<img src="https://i.imgur.com/DJmEXEB.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img src="https://i.imgur.com/wQgHAz2.png" height="80%" width="80%" alt="Start and Stop IIS"/>
 </p>
 <p>
-In your “osTicket-Installation-Files" folder, locate the "PHPManagerForIIS_V1.5.0.msi" file and install the program. As well as installing the "rewriteamd64_en-US.msi" module. After both have been installed successfully, go to your "C:" and create a folder called "PHP". Once that is created, go back into your “osTicket-Installation-Files" folder, right-click the "php-7.3.8-nts-Win32-VC15-x86.zip" and extract all into the new "PHP" folder we created on the "C:" drive. Once that has been extracted to your "PHP" folder, back into the “osTicket-Installation-Files," locate and install both the "VC_redist.x86.exe" & "mysql-5.5.62-win32.msi" file. After "mysql-5.5.62-win32.msi" has been installed and launched, select the standard configuration setup and fill in the modified security settings with the desired "Root" password. 
-</p>
-<br />
-
-<p>
-<img src="https://i.imgur.com/DJmEXEB.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
-</p>
-<p>
-From the start menu, search for "Internet Information Services" (IIS) and right-click and run as Admin. Register the "PHP" from within "IIS". Navigate to "PHP Manager" and locate the "Register new PHP version" and navigate back to the "PHP" folder we created on the "C:" in the folder, find the "php-cgi.exe" and select it as the new registered "PHP". Once that has been done, back in the "IIS" window, reload the "osticket-vm" by selecting the "Stop" and "Start" option. 
-</p>
-<br />
-
-<p>
-<img src="https://i.imgur.com/DJmEXEB.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
-</p>
-<p>
-Navigate back to your “osTicket-Installation-Files" folder and extract the "osticket-v1.15.8" folder. Once that has been extracted, copy the newly unzipped files into the wwwroot folder located in the inetpub folder. (C: ---> inetpub ---> wwwroot) and rename the "upload" folder to "osTicket" ***double check that the file is named correctly*** Once that has been done, back in the "IIS" window, reload the "osticket-vm" by selecting the "Stop" and "Start" option.
+In your “osTicket-Installation-Files" folder, locate the "PHPManagerForIIS_V1.5.0.msi" file and install the program. As well as installing the "rewriteamd64_en-US.msi" module. After both have been installed successfully, go to your "C:" and create a folder called "PHP". Once that is created, go back into your “osTicket-Installation-Files" folder, right-click the "php-7.3.8-nts-Win32-VC15-x86.zip" and extract all into the new "PHP" folder we created on the "C:" drive. Once that has been extracted to your "PHP" folder, navigate back into the “osTicket-Installation-Files," locate and install both the "VC_redist.x86.exe" & "mysql-5.5.62-win32.msi" file. After "mysql-5.5.62-win32.msi" has been installed and launched, select the standard configuration setup and fill in the modified security settings with the desired "Root" password. From the start menu, search for "Internet Information Services" (IIS) and right-click and run as Admin. Register the "PHP" from within "IIS". Navigate to "PHP Manager" and locate the "Register new PHP version" and navigate back to the "PHP" folder we created on the "C:" in the folder, find the "php-cgi.exe" and select it as the new registered "PHP". Once that has been done, back in the "IIS" window, reload the "osticket-vm" by selecting the "Stop" and "Start" option. Navigate back to your “osTicket-Installation-Files" folder and extract the "osticket-v1.15.8" folder. Once that has been extracted, copy the newly unzipped files into the wwwroot folder located in the inetpub folder. (C: ---> inetpub ---> wwwroot) and rename the "upload" folder to "osTicket" ***double check that the file is named correctly*** Once that has been done, back in the "IIS" window, reload the "osticket-vm" by selecting the "Stop" and "Start" option.
 </p>
 <br />
 
@@ -88,7 +72,7 @@ Go to Sites ---> default Web Site ---> osTicket on the right click "Browse *.80"
 <img src="https://i.imgur.com/aYM4IGz.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 </p>
 <p>
-Back into the osTicket installer, click continue, enter the chosen name of the helpdesk, and the default email. & create desired Admins. Once completed, navigate back to your “osTicket-Installation-Files" folder and install HeidiSQL. Once installed and opened. Create a new session with the same "User" & "Password" used in the installation section of the MySQL setup. Right-click "Unnamed" and create a new database named "osticket" ***make sure the name is correct***. Once above steps have been completed, navigate back to the "osTicket installer" and finish setting up by filling out the database settings. Which should look like the example below. and install once complete. 
+Back into the osTicket installer, click continue, enter the chosen name of the helpdesk, and the default email. & create desired Admins. Once completed, navigate back to your “osTicket-Installation-Files" folder and install HeidiSQL. Once installed and opened. Create a new session with the same "User" & "Password" used in the installation section of the MySQL setup. Right-click "Unnamed" and create a new database named "osticket" ***make sure the name is correct***. Once the above steps have been completed, navigate back to the "osTicket installer" and finish setting up by filling out the database settings. Which should look like the example below. and install once complete. 
  <img src="https://i.imgur.com/RWpFhtu.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 </p>
 <br />
